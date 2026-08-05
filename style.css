@@ -1032,3 +1032,9 @@ nav ul li a.active{
 .contact-link:hover{
     color:white;
 }
+/* Get Directions Button */
+
+.direction-btn{
+    text-align:center;
+    margin-top:20px;
+}
