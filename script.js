@@ -287,3 +287,35 @@ window.addEventListener("scroll", () => {
     });
 
 });
+// WhatsApp Appointment
+// ===============================
+
+const whatsappBtn = document.getElementById("whatsapp-book");
+
+if (whatsappBtn) {
+
+    whatsappBtn.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const name = document.querySelector('input[name="Name"]').value;
+        const phone = document.querySelector('input[name="Phone"]').value;
+        const problem = document.querySelector('textarea[name="Message"]').value;
+
+        const message =
+`Hello Garg Physiotherapy Clinic,
+
+Name: ${name}
+Phone: ${phone}
+Problem: ${problem}
+
+I would like to book an appointment.`;
+
+        const url =
+`https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+
+        window.open(url, "_blank");
+
+    });
+
+}
