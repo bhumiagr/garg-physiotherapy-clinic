@@ -4,12 +4,14 @@
 ========================================== */
 
 /* Google Font */
+html{
+    scroll-behavior:smooth;
+}
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
 }
 
 body{
@@ -972,4 +974,19 @@ nav ul li a.active{
 
     font-weight:600;
 
+}
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#00e676;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#00c853;
+    transform:translateY(-3px);
 }
