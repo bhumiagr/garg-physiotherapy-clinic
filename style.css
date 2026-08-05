@@ -1277,3 +1277,23 @@ nav ul li a.active{
         padding:10px;
     }
 }
+/* ==========================
+   GOOGLE RATING
+========================== */
+
+.rating{
+    text-align:center;
+    padding:60px 8%;
+    background:#0d2233;
+}
+
+.rating h2{
+    color:#FFD700;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.rating p{
+    color:#cfd8dc;
+    font-size:20px;
+}
