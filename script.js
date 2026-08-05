@@ -319,3 +319,14 @@ I would like to book an appointment.`;
     });
 
 }
+// FAQ
+
+document.querySelectorAll(".faq-question").forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        btn.parentElement.classList.toggle("active");
+
+    });
+
+});

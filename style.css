@@ -1125,3 +1125,42 @@ nav ul li a.active{
     transform:scale(1.1);
     background:#00c853;
 }
+/* FAQ Section */
+
+.faq{
+    padding:80px 8%;
+}
+
+.faq h2{
+    text-align:center;
+    color:#00e676;
+    margin-bottom:40px;
+    font-size:42px;
+}
+
+.faq-item{
+    margin-bottom:20px;
+    border-radius:12px;
+    overflow:hidden;
+    background:#0d2233;
+}
+
+.faq-question{
+    width:100%;
+    padding:20px;
+    background:#0d2233;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.faq-answer{
+    display:none;
+    padding:20px;
+    color:#cfd8dc;
+}
+
+.faq-item.active .faq-answer{
+    display:block;
+}
