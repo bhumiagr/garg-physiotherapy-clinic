@@ -1093,3 +1093,35 @@ nav ul li a.active{
     transform:scale(1.1);
     background:#0056d6;
 }
+/* Back To Top */
+
+.back-top{
+    position:fixed;
+    right:25px;
+    bottom:185px;
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+    background:#00e676;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#07131f;
+    text-decoration:none;
+    font-size:26px;
+    font-weight:bold;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+    transition:.3s;
+    z-index:9999;
+}
+
+.back-top:hover{
+    transform:scale(1.1);
+    background:#00c853;
+}
