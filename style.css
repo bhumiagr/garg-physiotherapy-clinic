@@ -1014,3 +1014,9 @@ nav ul li a.active{
     box-shadow:0 0 35px rgba(0,230,118,.8) !important;
     transform:translateY(-3px);
 }
+/* WhatsApp Appointment Button */
+
+#whatsapp-book{
+    display:inline-block;
+    margin-top:20px;
+}
