@@ -1,332 +1,353 @@
-// Smooth Scroll for Navbar Links
+// ==========================================
+// GARG PHYSIOTHERAPY CLINIC — FIXED JS
+// ==========================================
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.addEventListener("DOMContentLoaded", () => {
 
-    anchor.addEventListener('click', function(e) {
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            if (!href || href === "#") return;
 
-        const target = document.querySelector(this.getAttribute('href'));
-
-        if(target){
-
-            e.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        }
-
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        });
     });
 
-});
+    // Sticky Navbar
+    const navbar = document.querySelector(".navbar") || document.querySelector("nav");
 
-
-// Sticky Navbar
-
-window.addEventListener("scroll", function () {
-
-    const navbar = document.querySelector("nav");
-
-    if (window.scrollY > 60) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
+    function updateNavbar() {
+        if (!navbar) return;
+        navbar.classList.toggle("scrolled", window.scrollY > 60);
     }
 
-});
+    updateNavbar();
+    window.addEventListener("scroll", updateNavbar, { passive: true });
 
-// Scroll Reveal Animation
 
-const hiddenElements = document.querySelectorAll(".hidden");
+    // Scroll Reveal Animation
+    const hiddenElements = document.querySelectorAll(".hidden, .reveal");
 
-const observer = new IntersectionObserver((entries) => {
+    if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
 
-    entries.forEach((entry) => {
+                entry.target.classList.add("show", "active");
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.12 });
 
-        if (entry.isIntersecting) {
+        hiddenElements.forEach(el => revealObserver.observe(el));
+    } else {
+        hiddenElements.forEach(el => el.classList.add("show", "active"));
+    }
 
-            entry.target.classList.add("show");
 
+    // Gallery Slider
+    const images = [
+        "images/gallery1.jpg",
+        "images/gallery2.jpg",
+        "images/gallery3.jpg",
+        "images/gallery4.jpg"
+    ];
+
+    const slider = document.getElementById("slider-image");
+    let imageIndex = 0;
+
+    function showImage(index) {
+        if (!slider) return;
+        imageIndex = index % images.length;
+        slider.src = images[imageIndex];
+        slider.alt = "Garg Physiotherapy Clinic gallery image " + (imageIndex + 1);
+    }
+
+    if (slider) {
+        showImage(0);
+
+        if (images.length > 1) {
+            setInterval(() => {
+                showImage((imageIndex + 1) % images.length);
+            }, 3000);
         }
+    }
 
-    });
 
-});
+    // Animated Counters
+    const counters = document.querySelectorAll(".counter[data-target]");
+    const aboutSection = document.querySelector(".about") ||
+                         document.getElementById("about");
+    let countersStarted = false;
 
-hiddenElements.forEach((el) => observer.observe(el));
-// Gallery Slider
+    function startCounters() {
+        if (countersStarted || !counters.length) return;
+        countersStarted = true;
 
-const images=[
+        counters.forEach(counter => {
+            const target = Number(counter.dataset.target);
+            if (!Number.isFinite(target) || target < 0) return;
 
-"images/gallery1.jpg",
-    "images/gallery2.jpg",
-    "images/gallery3.jpg",
-    "images/gallery4.jpg"
+            const duration = 1400;
+            const startTime = performance.now();
 
-];
+            function updateCounter(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                counter.textContent = Math.floor(target * progress);
 
-let index=0;
-
-const slider=document.getElementById("slider-image");
-
-setInterval(()=>{
-
-index++;
-
-if(index>=images.length){
-
-index=0;
-
-}
-
-slider.src=images[index];
-
-},3000);
-// ===============================
-// Animated Counter
-// ===============================
-
-const counters = document.querySelectorAll(".counter");
-
-const startCounter = () => {
-    counters.forEach(counter => {
-
-        const target = +counter.getAttribute("data-target");
-        let count = 0;
-
-        const speed = target / 100;
-
-        const updateCounter = () => {
-
-            if (count < target) {
-
-                count += speed;
-
-                counter.innerText = Math.ceil(count);
-
-                requestAnimationFrame(updateCounter);
-
-            } else {
-
-                if (target === 1000) {
-                    counter.innerText = "1000+";
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else if (target === 1000) {
+                    counter.textContent = "1000+";
+                } else if (target === 98) {
+                    counter.textContent = "98%";
+                } else {
+                    counter.textContent = target + "+";
                 }
-                else if (target === 98) {
-                    counter.innerText = "98%";
-                }
-                else {
-                    counter.innerText = target + "+";
-                }
-
             }
 
-        };
-
-        updateCounter();
-
-    });
-};
-
-const aboutSection = document.querySelector(".about");
-
-const observerCounter = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-            startCounter();
-
-            observerCounter.unobserve(entry.target);
-
-        }
-
-    });
-
-}, {
-    threshold: 0.5
-});
-
-observerCounter.observe(aboutSection);
-// ===============================
-// Hamburger Menu
-// ===============================
-
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", () => {
-
-    navLinks.classList.toggle("active");
-
-    if(navLinks.classList.contains("active")){
-        menuToggle.innerHTML = "✖";
-    }else{
-        menuToggle.innerHTML = "☰";
+            requestAnimationFrame(updateCounter);
+        });
     }
 
-});
+    if (aboutSection && "IntersectionObserver" in window) {
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.25 });
 
-// Close menu after clicking a link
+        counterObserver.observe(aboutSection);
+    } else {
+        startCounters();
+    }
 
-document.querySelectorAll("#nav-links a").forEach(link => {
 
-    link.addEventListener("click", () => {
+    // Hamburger / Mobile Menu
+    const menuToggle = document.getElementById("menu-toggle") ||
+                       document.getElementById("menuToggle");
 
-        navLinks.classList.remove("active");
-        menuToggle.innerHTML = "☰";
+    const navLinks = document.getElementById("nav-links") ||
+                     document.getElementById("navLinks");
 
-    });
+    function closeMobileMenu() {
+        if (navLinks) navLinks.classList.remove("active");
 
-});
-// ===============================
-// Loading Screen
-// ===============================
+        if (menuToggle) {
+            menuToggle.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
 
-window.addEventListener("load", () => {
+            if (menuToggle.dataset.iconMode === "text") {
+                menuToggle.textContent = "☰";
+            }
+        }
+    }
 
+    if (menuToggle && navLinks) {
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("active");
+            menuToggle.classList.toggle("active", isOpen);
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+            const icon = menuToggle.textContent.trim();
+
+            if (icon === "☰" || icon === "✖" ||
+                menuToggle.dataset.iconMode === "text") {
+                menuToggle.dataset.iconMode = "text";
+                menuToggle.textContent = isOpen ? "✖" : "☰";
+            }
+        });
+
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", closeMobileMenu);
+        });
+
+        document.addEventListener("keydown", e => {
+            if (e.key === "Escape") closeMobileMenu();
+        });
+    }
+
+
+    // Loading Screen
     const loader = document.getElementById("loader");
 
-    setTimeout(() => {
-
-        loader.classList.add("loader-hide");
-
-    }, 2000);
-
-});
-// ===============================
-// Scroll Progress Bar
-// ===============================
-
-window.addEventListener("scroll", () => {
-
-    const scrollTop = document.documentElement.scrollTop;
-    const scrollHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-
-    const progress = (scrollTop / scrollHeight) * 100;
-
-    document.getElementById("progress-bar").style.width = progress + "%";
-
-
-
-});
-// ===============================
-// Gallery Lightbox
-// ===============================
-
-const sliderImage = document.getElementById("slider-image");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const closeLightbox = document.getElementById("close-lightbox");
-
-if (sliderImage && lightbox && lightboxImg && closeLightbox) {
-
-    sliderImage.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = sliderImage.src;
-    });
-
-    closeLightbox.addEventListener("click", () => {
-        lightbox.style.display = "none";
-    });
-
-    lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
-            lightbox.style.display = "none";
-        }
-    });
-
-}
-
-// Close Button
-closeLightbox.addEventListener("click", () => {
-
-    lightbox.style.display = "none";
-
-});
-
-// Close when clicking outside image
-lightbox.addEventListener("click", (e) => {
-
-    if (e.target === lightbox) {
-        lightbox.style.display = "none";
+    function hideLoader() {
+        if (!loader) return;
+        loader.classList.add("loader-hide", "loader-hidden");
     }
 
-});
-// ===============================
-// Active Navbar Link on Scroll
-// ===============================
-
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll("#nav-links a");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 120;
-
-        if (pageYOffset >= sectionTop) {
-            current = section.getAttribute("id");
+    if (loader) {
+        if (document.readyState === "complete") {
+            setTimeout(hideLoader, 500);
+        } else {
+            window.addEventListener("load", () => {
+                setTimeout(hideLoader, 500);
+            }, { once: true });
         }
+    }
 
-    });
 
-    navItems.forEach(link => {
+    // Scroll Progress Bar
+    const progressBar = document.getElementById("progress-bar");
 
-        link.classList.remove("active");
+    function updateProgress() {
+        if (!progressBar) return;
 
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
+        const height = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = height > 0 ? (window.scrollY / height) * 100 : 0;
 
-    });
+        progressBar.style.width =
+            Math.max(0, Math.min(100, progress)) + "%";
+    }
 
-});
-// WhatsApp Appointment
-// ===============================
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
 
-const whatsappBtn = document.getElementById("whatsapp-book");
 
-if (whatsappBtn) {
+    // Gallery Lightbox
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeLightbox = document.getElementById("close-lightbox");
 
-    whatsappBtn.addEventListener("click", function (e) {
+    function openLightbox() {
+        if (!slider || !lightbox || !lightboxImg) return;
 
-        e.preventDefault();
+        lightboxImg.src = slider.src;
+        lightboxImg.alt = slider.alt || "Clinic gallery image";
+        lightbox.style.display = "flex";
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lightbox-open");
+    }
 
-        const name = document.querySelector('input[name="Name"]').value;
-        const phone = document.querySelector('input[name="Phone"]').value;
-        const problem = document.querySelector('textarea[name="Message"]').value;
+    function hideLightbox() {
+        if (!lightbox) return;
 
-        const message =
-`Hello Garg Physiotherapy Clinic,
+        lightbox.style.display = "none";
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("lightbox-open");
+    }
 
-Name: ${name}
-Phone: ${phone}
-Problem: ${problem}
+    if (slider && lightbox && lightboxImg && closeLightbox) {
+        slider.addEventListener("click", openLightbox);
+        slider.style.cursor = "zoom-in";
 
-I would like to book an appointment.`;
+        closeLightbox.addEventListener("click", hideLightbox);
 
-        const url =
-`https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+        lightbox.addEventListener("click", e => {
+            if (e.target === lightbox) hideLightbox();
+        });
 
-        window.open(url, "_blank");
+        document.addEventListener("keydown", e => {
+            if (e.key === "Escape") hideLightbox();
+        });
+    }
 
-    });
 
-}
-// FAQ
+    // Active Navbar Link on Scroll
+    const sections = document.querySelectorAll("section[id]");
+    const navItems = document.querySelectorAll("#nav-links a, #navLinks a");
 
-document.querySelectorAll(".faq-question").forEach(btn => {
+    function updateActiveLink() {
+        if (!sections.length || !navItems.length) return;
 
-    btn.addEventListener("click", () => {
+        let current = "";
+        const position = window.scrollY + 140;
 
-        btn.parentElement.classList.toggle("active");
+        sections.forEach(section => {
+            if (position >= section.offsetTop) {
+                current = section.id;
+            }
+        });
 
+        navItems.forEach(link => {
+            const active = link.getAttribute("href") === "#" + current;
+
+            link.classList.toggle("active", active);
+
+            if (active) {
+                link.setAttribute("aria-current", "location");
+            } else {
+                link.removeAttribute("aria-current");
+            }
+        });
+    }
+
+    updateActiveLink();
+    window.addEventListener("scroll", updateActiveLink, { passive: true });
+
+
+    // WhatsApp Appointment
+    const whatsappBtn = document.getElementById("whatsapp-book");
+
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener("click", e => {
+            e.preventDefault();
+
+            const nameField = document.querySelector(
+                'input[name="Name"], input[name="name"]'
+            );
+
+            const phoneField = document.querySelector(
+                'input[name="Phone"], input[name="phone"]'
+            );
+
+            const problemField = document.querySelector(
+                'textarea[name="Message"], textarea[name="message"]'
+            );
+
+            const name = nameField ? nameField.value.trim() : "";
+            const phone = phoneField ? phoneField.value.trim() : "";
+            const problem = problemField ? problemField.value.trim() : "";
+
+            if (!name || !phone) {
+                alert("Please enter your name and phone number first.");
+
+                if (!name && nameField) nameField.focus();
+                else if (phoneField) phoneField.focus();
+
+                return;
+            }
+
+            // Replace this example with the clinic's real WhatsApp number.
+            const clinicWhatsAppNumber = "919876543210";
+
+            const message =
+                "Hello Garg Physiotherapy Clinic,\n\n" +
+                "Name: " + name + "\n" +
+                "Phone: " + phone + "\n" +
+                "Problem: " + (problem || "Not specified") + "\n\n" +
+                "I would like to book an appointment.";
+
+            const url = "https://wa.me/" + clinicWhatsAppNumber +
+                        "?text=" + encodeURIComponent(message);
+
+            window.open(url, "_blank", "noopener,noreferrer");
+        });
+    }
+
+
+    // FAQ Accordion
+    document.querySelectorAll(".faq-question").forEach(button => {
+        button.addEventListener("click", () => {
+            const faqItem = button.parentElement;
+            if (!faqItem) return;
+
+            const isOpen = faqItem.classList.toggle("active");
+            button.setAttribute("aria-expanded", String(isOpen));
+        });
     });
 
 });

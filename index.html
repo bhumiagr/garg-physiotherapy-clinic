@@ -1,545 +1,954 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Garg Physiotherapy Clinic | Dr. Bhumija Garg</title>
 
-    <meta name="description" content="Garg Physiotherapy Clinic in Jaipur offers treatment for back pain, neck pain, sports injury, rehabilitation, knee pain, manual therapy and advanced physiotherapy by Dr. Bhumija Garg.">
+    <meta name="description"
+        content="Garg Physiotherapy Clinic in Jaipur. Explore physiotherapy services, consultation and appointment information with Dr. Bhumija Garg.">
 
-    <meta name="keywords" content="Physiotherapy Jaipur, Physiotherapist Jaipur, Back Pain Treatment, Neck Pain, Sports Injury, Knee Pain, Garg Physiotherapy Clinic, Dr. Bhumija Garg">
+    <meta name="theme-color" content="#0b1728">
 
-    <meta name="author" content="Dr. Bhumija Garg">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Garg Physiotherapy Clinic | Dr. Bhumija Garg">
-    <meta property="og:description" content="Professional Physiotherapy Clinic in Jaipur for Back Pain, Neck Pain, Sports Injury & Rehabilitation.">
-    <meta property="og:image" content="https://gargphysio.netlify.app/images/logo.png">
-    <meta property="og:url" content="https://gargphysio.netlify.app">
-    <meta property="og:type" content="website">
-
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#00e676">
-
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <meta name="google-site-verification" content="hfMjRahwRPEM4AjZQudU4vn1vrNnASOSKGCvkuwVA_s" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-
-<!-- Loading Screen -->
-<div id="loader">
-
-    <div class="loader-content">
-
-        <h1>🏥</h1>
-
-        <h2>Garg Physiotherapy Clinic</h2>
-
-        <div class="loading-bar">
-            <div class="loading-fill"></div>
+    <!-- LOADING SCREEN -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-icon">G</div>
+            <h2>GARG <span>PHYSIOTHERAPY</span></h2>
+            <p>Helping You Move Better</p>
+            <div class="loader-line"></div>
         </div>
-
     </div>
 
-</div>
-<!-- Scroll Progress Bar -->
-<div id="progress-bar"></div>
-<a href="tel:+919876543210" class="call-btn">
-    📞
-</a>
-<!-- WhatsApp Button -->
 
-<a href="https://wa.me/919876543210" class="whatsapp" target="_blank">
-    💬
-</a>
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
 
-<!-- Navigation -->
+        <a href="#home" class="logo">
+            <div class="logo-icon">G</div>
 
-<nav>
-
-   <h2 class="logo">
-    🏥 Garg Physio
-</h2>
-
-    <!-- Hamburger Button -->
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
-
-    <ul id="nav-links">
-
-        <li><a href="#home">Home</a></li>
-
-        <li><a href="#about">About</a></li>
-
-        <li><a href="#services">Services</a></li>
-
-        <li><a href="#doctor">Doctor</a></li>
-
-        <li><a href="#gallery">Gallery</a></li>
-
-        <li><a href="#reviews">Reviews</a></li>
-
-        <li><a href="#appointment">Appointment</a></li>
-
-        <li><a href="#contact">Contact</a></li>
-
-    </ul>
-
-</nav>
-<!-- Emergency Banner -->
-
-<section class="emergency-banner">
-
-    <p>
-        🚨 Need Urgent Physiotherapy?
-        <a href="tel:+919876543210">Call Now</a>
-    </p>
-
-</section>
-<!-- Hero Section -->
-
-<section class="hero hidden" id="home">
-
-    <div class="left">
-
-        <h1>
-            Recover Faster.<br>
-            Live Pain Free.
-        </h1>
-
-        <p>
-            Professional Physiotherapy Treatment for Back Pain,
-            Neck Pain, Sports Injury & Rehabilitation.
-        </p>
-
-       <a href="#appointment" class="btn">Book Appointment</a>
-    </div>
-
-    <div class="right">
-
-        <img src="images/doctor.jpg" alt="Doctor">
-
-    </div>
-
-</section>
-<!-- Google Rating -->
-
-<section class="rating hidden">
-
-    <h2>⭐⭐⭐⭐⭐ 4.9/5 Rating</h2>
-
-    <p>
-        Trusted by 1000+ Happy Patients in Jaipur
-    </p>
-
-</section>
-<!-- About Section -->
-
-<section class="about hidden" id="about" data-aos="fade-up">
-
-    <div class="about-left">
-
-        <h2>About Garg Physiotherapy Clinic</h2>
-
-        <p>
-            We provide advanced physiotherapy treatment using modern
-            equipment and evidence-based techniques. Our goal is to
-            reduce pain, improve movement and help every patient
-            recover quickly.
-        </p>
-
-        <div class="stats">
-
-            <div class="box">
-               <h3 class="counter" data-target="1000">0</h3>
-                <span>Happy Patients</span>
+            <div class="logo-text">
+                <h2>GARG <span>PHYSIO</span></h2>
+                <p>CARE • MOVEMENT • RECOVERY</p>
             </div>
-
-            <div class="box">
-                <h3 class="counter" data-target="15">0</h3>
-                <span>Years Experience</span>
-            </div>
-
-            <div class="box">
-                <h3 class="counter" data-target="98">0</h3>
-                <span>Recovery Rate</span>
-            </div>
-
-            <div class="box">
-                <h3>24×7</h3>
-                <span>Support</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section> 
-<!-- Why Choose Us -->
-
-<section class="why-us hidden" id="why-us">
-
-    <h2>Why Choose Garg Physiotherapy Clinic?</h2>
-
-    <div class="why-grid">
-
-        <div class="why-card">
-            <h3>👨‍⚕️ Expert Physiotherapist</h3>
-            <p>Professional treatment with modern physiotherapy techniques.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>🏥 Modern Equipment</h3>
-            <p>Advanced rehabilitation equipment for faster recovery.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>💚 Personalized Care</h3>
-            <p>Every patient receives a customized treatment plan.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>⭐ Trusted by Patients</h3>
-            <p>Hundreds of satisfied patients with excellent recovery results.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- Services Section -->
-
-<section class="services hidden" id="services" data-aos="zoom-in">
-
-    <h2>Our Physiotherapy Services</h2>
-
-    <div class="service-grid">
-
-        <div class="service-card">
-            <h3>🦴 Back Pain</h3>
-            <p>Effective treatment for chronic and acute back pain.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>💪 Sports Injury</h3>
-            <p>Fast recovery programs for athletes and sports persons.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>🦵 Knee Pain</h3>
-            <p>Advanced therapy for knee pain and joint stiffness.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>🧠 Neck Pain</h3>
-            <p>Modern techniques to relieve neck pain and improve posture.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>🤲 Manual Therapy</h3>
-            <p>Hands-on treatment to restore movement and reduce pain.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>🏃 Rehabilitation</h3>
-            <p>Complete rehabilitation after surgery or injury.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- Doctor Section -->
-
-<section class="doctor hidden" id="doctor" data-aos="fade-right">
-
-    <div class="doctor-image">
-        <img src="images/doctor.jpg" alt="Dr. Bhumija Garg">
-    </div>
-
-    <div class="doctor-info">
-
-        <h2>Dr. Bhumija Garg</h2>
-
-        <h3>Senior Physiotherapist</h3>
-
-        <p>
-            Dr. Bhumija Garg specializes in Back Pain, Neck Pain,
-            Sports Injury Rehabilitation, Post Surgery Recovery,
-            Manual Therapy and Advanced Physiotherapy Treatments.
-        </p>
-
-       <a href="#appointment" class="btn">Book Consultation</a>
-
-    </div>
-
-</section>
-
-<!-- Gallery Section -->
-
-<section class="gallery hidden" id="gallery" data-aos="fade-left">
-
-    <h2>Our Clinic Gallery</h2>
-
-    <div class="slider">
-
-   <img id="slider-image" src="images/gallery1.jpg" alt="Clinic">
-
-    </div>
-
-</section>
-<!-- Lightbox -->
-<div id="lightbox">
-
-    <span id="close-lightbox">&times;</span>
-
-    <img id="lightbox-img" src="" alt="Gallery Image">
-
-</div>
-<!-- Testimonials Section -->
-
-<section class="testimonials hidden" id="reviews">
-
-    <h2>What Our Patients Say</h2>
-
-    <div class="testimonial-container">
-
-        <div class="testimonial-card">
-            <h3>⭐⭐⭐⭐⭐</h3>
-            <p>
-                "Excellent treatment! My back pain reduced within a few sessions.
-                Highly recommended."
-            </p>
-            <h4>- Rahul Sharma</h4>
-        </div>
-
-        <div class="testimonial-card">
-            <h3>⭐⭐⭐⭐⭐</h3>
-            <p>
-                "Very professional doctor and friendly staff.
-                The clinic environment is excellent."
-            </p>
-            <h4>- Priya Verma</h4>
-        </div>
-
-        <div class="testimonial-card">
-            <h3>⭐⭐⭐⭐⭐</h3>
-            <p>
-                "Best physiotherapy clinic. I recovered quickly after my sports injury."
-            </p>
-            <h4>- Aman Gupta</h4>
-        </div>
-
-    </div>
-
-</section>
-<section class="google-reviews hidden">
-
-    <h2>⭐ Google Reviews</h2>
-
-    <p>See what our patients say about us on Google.</p>
-
-    <div class="review-buttons">
-
-        <a href="https://g.page/r/" target="_blank" class="btn">
-            ⭐ Read Reviews
         </a>
 
-        <a href="https://search.google.com/local/writereview?placeid=" target="_blank" class="btn">
-            ✍ Write a Review
-        </a>
-
-    </div>
-
-</section>
-<!-- Appointment Section -->
-
-<section class="appointment hidden" id="appointment">
-
-    <h2>Book Your Appointment</h2>
-
-    <p>
-        Fill out the form below and our team will contact you shortly.
-    </p>
-
-  <form action="https://formsubmit.co/bhumiagr71@gmail.com" method="POST">
-
-    <input type="text" name="Name" placeholder="Your Name" required>
-
-    <input type="tel" name="Phone" placeholder="Phone Number" required>
-
-    <input type="email" name="Email" placeholder="Your Email" required>
-
-    <input type="date" name="Appointment Date" required>
-
-    <textarea name="Message" placeholder="Describe your problem"></textarea>
-
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_subject" value="New Appointment Request">
-   <input type="hidden" name="_next" value="https://gargphysio.netlify.app/thankyou.html">
-    <button type="submit">Book Appointment</button>
-
-</form>
-<a href="#" id="whatsapp-book" class="btn">
-    📲 Book on WhatsApp
-</a>
-
-</section>
- <div class="faq-answer">
-            <p>Most physiotherapy treatments are painless. Some exercises may cause slight discomfort during recovery.</p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <button class="faq-question">How many sessions will I need?</button>
-        <div class="faq-answer">
-            <p>The number of sessions depends on your condition. Most patients improve within 5–10 sessions.</p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <button class="faq-question">Do I need a doctor's prescription?</button>
-        <div class="faq-answer">
-            <p>No. You can directly book an appointment with our physiotherapist.</p>
-        </div>
-    </div>
-
-</section>
-<!-- Contact Section -->
-
-<section class="contact hidden" id="contact">
-
-    <h2>Contact Us</h2>
-
-    <div class="contact-container">
-
-        <div class="contact-info">
-
-            <h3>📍 Garg Physiotherapy Clinic</h3>
-
-            <p><strong>Doctor:</strong> Dr. Bhumija Garg</p>
-
-          <p><strong>Phone:</strong>
-<a href="tel:+919876543210" class="contact-link">
-+91 9876543210
-</a>
-</p>
-            <p><strong>Email:</strong> gargphysio@gmail.com</p>
-
-           <p><strong>Address:</strong><br>
-            Garg Physiotherapy Clinic<br>
-                 Jagatpura, Jaipur<br>
-                  Rajasthan – 302017
-        </p>
-
-            <p><strong>Timing:</strong> Mon - Sat | 9:00 AM - 7:00 PM</p>
-
-        </div>
-
-        <div class="map">
-
-            <iframe
-                src="https://www.google.com/maps?q=Jagatpura,Jaipur,Rajasthan&output=embed"
-                width="100%"
-                height="350"
-                style="border:0;border-radius:15px;"
-                allowfullscreen
-                loading="lazy">
-            </iframe>
-            <div class="direction-btn">
-    <a href="https://www.google.com/maps/search/?api=1&query=Jagatpura,Jaipur,Rajasthan"
-       target="_blank"
-       class="btn">
-       📍 Get Directions
-    </a>
-        </div>
-
-    </div>
-</div> <!-- contact-container -->
-</section>
-
-<!-- Footer -->
-
-<footer>
-
-    <div class="footer-container">
-
-        <div class="footer-box">
-
-            <h2>🏥 Garg Physiotherapy Clinic</h2>
-
-            <p>
-                Helping people recover faster with advanced physiotherapy,
-                rehabilitation and pain management.
-            </p>
-
-        </div>
-
-        <div class="footer-box">
-
-            <h3>Quick Links</h3>
-
+        <nav class="nav-links" id="navLinks">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
 
+            <a href="#appointment" class="nav-appointment">
+                Book Appointment <span>↗</span>
+            </a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+
+            <div class="hero-background"></div>
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    YOUR JOURNEY TO BETTER MOVEMENT
+                </div>
+
+                <h1>
+                    Move Better.<br>
+                    Feel <span>Stronger.</span><br>
+                    Live Freely.
+                </h1>
+
+                <p class="hero-description">
+                    Personalised physiotherapy care focused on helping
+                    you improve movement, build strength and get back
+                    to the activities you love.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#appointment" class="btn btn-primary">
+                        Book Consultation <span>↗</span>
+                    </a>
+
+                    <a href="#services" class="btn btn-outline">
+                        Explore Services <span>→</span>
+                    </a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="note-icon">✦</span>
+                    <p>Personal attention. Thoughtful care. Better movement.</p>
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="hero-image-wrap">
+                    <img
+                        src="images/doctor.png"
+                        alt="Dr. Bhumija Garg - Physiotherapy"
+                        class="hero-doctor-image"
+                        onerror="this.style.display='none';"
+                    >
+
+                    <div class="image-placeholder">
+                        <span>G</span>
+                        <p>Garg Physiotherapy Clinic</p>
+                    </div>
+                </div>
+
+                <div class="floating-card floating-card-top">
+                    <span class="floating-icon">✚</span>
+                    <div>
+                        <strong>Patient-Focused Care</strong>
+                        <small>Care that starts with you</small>
+                    </div>
+                </div>
+
+                <div class="floating-card floating-card-bottom">
+                    <span class="floating-icon">↗</span>
+                    <div>
+                        <strong>Better Movement</strong>
+                        <small>One step at a time</small>
+                    </div>
+                </div>
+
+                <div class="hero-circle"></div>
+
+            </div>
+
+            <div class="hero-bottom">
+                <span>PHYSIOTHERAPY</span>
+                <span>REHABILITATION</span>
+                <span>WELLNESS</span>
+            </div>
+
+        </section>
+
+
+        <!-- INTRO STRIP -->
+        <section class="intro-strip">
+
+            <div class="intro-item">
+                <span class="intro-number">01</span>
+                <div>
+                    <h3>Understand</h3>
+                    <p>Listen to your needs and goals.</p>
+                </div>
+            </div>
+
+            <div class="intro-item">
+                <span class="intro-number">02</span>
+                <div>
+                    <h3>Personalise</h3>
+                    <p>Focus on your individual needs.</p>
+                </div>
+            </div>
+
+            <div class="intro-item">
+                <span class="intro-number">03</span>
+                <div>
+                    <h3>Progress</h3>
+                    <p>Work towards better movement.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="about section-padding" id="about">
+
+            <div class="section-heading">
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    ABOUT OUR CLINIC
+                </div>
+
+                <h2>
+                    Care that puts<br>
+                    <span>you first.</span>
+                </h2>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-image">
+                    <img
+                        src="images/doctor.png"
+                        alt="Dr. Bhumija Garg"
+                        loading="lazy"
+                        onerror="this.style.display='none';"
+                    >
+
+                    <div class="about-image-label">
+                        <span>G</span>
+                        <div>
+                            <strong>Garg Physiotherapy Clinic</strong>
+                            <small>Jaipur, Rajasthan</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+
+                    <p class="about-lead">
+                        Every movement matters. Every recovery journey
+                        deserves care, patience and attention.
+                    </p>
+
+                    <p>
+                        At Garg Physiotherapy Clinic, our focus is on
+                        understanding individual needs and supporting
+                        people as they work towards improved movement,
+                        strength and everyday function.
+                    </p>
+
+                    <p>
+                        Under the care of Dr. Bhumija Garg, the clinic
+                        aims to provide a welcoming environment where
+                        patients can discuss their concerns and learn
+                        about suitable physiotherapy options.
+                    </p>
+
+                    <div class="about-points">
+
+                        <div class="about-point">
+                            <span>✓</span>
+                            <p>Individual-focused approach</p>
+                        </div>
+
+                        <div class="about-point">
+                            <span>✓</span>
+                            <p>Clear communication and guidance</p>
+                        </div>
+
+                        <div class="about-point">
+                            <span>✓</span>
+                            <p>Movement and rehabilitation support</p>
+                        </div>
+
+                    </div>
+
+                    <a href="#appointment" class="text-link">
+                        Get in Touch <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES SECTION -->
+        <section class="services section-padding" id="services">
+
+            <div class="section-heading centered">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    OUR SERVICES
+                </div>
+
+                <h2>
+                    Support for your<br>
+                    <span>movement journey.</span>
+                </h2>
+
+                <p>
+                    Explore physiotherapy service options and discuss
+                    your needs with the clinic before starting care.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <article class="service-card">
+                    <div class="service-icon">✳</div>
+                    <span class="service-number">01</span>
+                    <h3>Musculoskeletal Care</h3>
+                    <p>
+                        Assessment and rehabilitation support for
+                        muscle, joint and movement-related concerns.
+                    </p>
+                    <a href="#appointment" class="service-link">
+                        Enquire Now <span>↗</span>
+                    </a>
+                </article>
+
+
+                <article class="service-card">
+                    <div class="service-icon">↗</div>
+                    <span class="service-number">02</span>
+                    <h3>Pain Management</h3>
+                    <p>
+                        Guidance to help understand pain and explore
+                        appropriate movement and rehabilitation options.
+                    </p>
+                    <a href="#appointment" class="service-link">
+                        Enquire Now <span>↗</span>
+                    </a>
+                </article>
+
+
+                <article class="service-card">
+                    <div class="service-icon">◎</div>
+                    <span class="service-number">03</span>
+                    <h3>Post-Injury Rehabilitation</h3>
+                    <p>
+                        Individualised rehabilitation support following
+                        an injury, based on assessment and needs.
+                    </p>
+                    <a href="#appointment" class="service-link">
+                        Enquire Now <span>↗</span>
+                    </a>
+                </article>
+
+
+                <article class="service-card">
+                    <div class="service-icon">⌁</div>
+                    <span class="service-number">04</span>
+                    <h3>Mobility & Flexibility</h3>
+                    <p>
+                        Guidance on movement, flexibility and functional
+                        activities suited to individual abilities.
+                    </p>
+                    <a href="#appointment" class="service-link">
+                        Enquire Now <span>↗</span>
+                    </a>
+                </article>
+
+
+                <article class="service-card">
+                    <div class="service-icon">✚</div>
+                    <span class="service-number">05</span>
+                    <h3>Posture & Movement Guidance</h3>
+                    <p>
+                        Understand movement habits and discuss practical
+                        ways to support everyday physical activity.
+                    </p>
+                    <a href="#appointment" class="service-link">
+                        Enquire Now <span>↗</span>
+                    </a>
+                </article>
+
+
+                <article class="service-card service-card-highlight">
+                    <div class="service-icon">→</div>
+                    <span class="service-number">06</span>
+                    <h3>Personalised Consultation</h3>
+                    <p>
+                        Discuss your concerns and goals to understand
+                        which physiotherapy options may be appropriate.
+                    </p>
+                    <a href="#appointment" class="service-link">
+                        Book Consultation <span>↗</span>
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- APPROACH SECTION -->
+        <section class="approach section-padding">
+
+            <div class="approach-content">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    OUR APPROACH
+                </div>
+
+                <h2>
+                    Your goals.<br>
+                    Your journey.<br>
+                    <span>Your progress.</span>
+                </h2>
+
+                <p>
+                    Physiotherapy is not one-size-fits-all.
+                    The right approach depends on your concerns,
+                    assessment and individual goals.
+                </p>
+
+                <a href="#appointment" class="btn btn-primary">
+                    Discuss Your Needs <span>↗</span>
+                </a>
+
+            </div>
+
+            <div class="approach-steps">
+
+                <div class="approach-step">
+                    <span>01</span>
+                    <div>
+                        <h3>Listen & Understand</h3>
+                        <p>
+                            Discuss your concerns, daily activities
+                            and personal goals.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="approach-step">
+                    <span>02</span>
+                    <div>
+                        <h3>Assess & Plan</h3>
+                        <p>
+                            Explore suitable care options based on
+                            individual assessment.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="approach-step">
+                    <span>03</span>
+                    <div>
+                        <h3>Support Your Progress</h3>
+                        <p>
+                            Follow your plan and review progress
+                            with appropriate professional guidance.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOCTOR SECTION -->
+        <section class="doctor section-padding" id="doctor">
+
+            <div class="doctor-grid">
+
+                <div class="doctor-photo">
+                    <img
+                        src="images/doctor.png"
+                        alt="Dr. Bhumija Garg - Garg Physiotherapy Clinic"
+                        loading="lazy"
+                        onerror="this.style.display='none';"
+                    >
+                </div>
+
+                <div class="doctor-details">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        MEET YOUR PHYSIOTHERAPIST
+                    </div>
+
+                    <h2>
+                        Dr. Bhumija<br>
+                        <span>Garg</span>
+                    </h2>
+
+                    <p class="doctor-role">
+                        Physiotherapy Professional
+                    </p>
+
+                    <p>
+                        Focused on listening to patient concerns,
+                        understanding individual needs and providing
+                        guidance for appropriate physiotherapy care.
+                    </p>
+
+                    <p>
+                        Contact the clinic to enquire about
+                        qualifications, available services and
+                        appointment availability.
+                    </p>
+
+                    <a href="#appointment" class="btn btn-primary">
+                        Request an Appointment <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- APPOINTMENT SECTION -->
+        <section class="appointment section-padding" id="appointment">
+
+            <div class="appointment-grid">
+
+                <div class="appointment-info">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        LET'S GET STARTED
+                    </div>
+
+                    <h2>
+                        Take the first step<br>
+                        towards <span>better movement.</span>
+                    </h2>
+
+                    <p>
+                        Fill in the form to prepare an appointment
+                        enquiry. The details will open in WhatsApp
+                        so you can send them to the clinic.
+                    </p>
+
+                    <div class="appointment-note">
+                        <span>✦</span>
+                        <p>
+                            Submitting an enquiry does not confirm
+                            an appointment. The clinic must confirm
+                            your date and time.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <form class="appointment-form" id="appointmentForm">
+
+                    <h3>Appointment Enquiry</h3>
+
+                    <p class="form-subtitle">
+                        Enter your details below.
+                    </p>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="patientName">Full Name</label>
+                            <input
+                                type="text"
+                                id="patientName"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="patientPhone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="patientPhone"
+                                name="phone"
+                                placeholder="Enter phone number"
+                                pattern="[0-9+\-\s]{10,16}"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="serviceSelect">Service of Interest</label>
+
+                        <select id="serviceSelect" name="service" required>
+                            <option value="">Select a service</option>
+                            <option>Musculoskeletal Care</option>
+                            <option>Pain Management</option>
+                            <option>Post-Injury Rehabilitation</option>
+                            <option>Mobility & Flexibility</option>
+                            <option>Posture & Movement Guidance</option>
+                            <option>Personalised Consultation</option>
+                            <option>Other / Not Sure</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="appointmentDate">Preferred Date</label>
+                            <input
+                                type="date"
+                                id="appointmentDate"
+                                name="date"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="appointmentTime">Preferred Time</label>
+                            <select id="appointmentTime" name="time">
+                                <option value="">Select time</option>
+                                <option>Morning</option>
+                                <option>Afternoon</option>
+                                <option>Evening</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="patientMessage">
+                            Message (Optional)
+                        </label>
+
+                        <textarea
+                            id="patientMessage"
+                            name="message"
+                            rows="4"
+                            placeholder="Briefly describe your enquiry"
+                        ></textarea>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary form-submit">
+                        Send Enquiry on WhatsApp <span>↗</span>
+                    </button>
+
+                    <p class="form-privacy">
+                        Your message will be prepared in WhatsApp.
+                        You can review it before sending.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+        <section class="contact section-padding" id="contact">
+
+            <div class="section-heading centered">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    CONTACT US
+                </div>
+
+                <h2>
+                    We're here to<br>
+                    <span>help you connect.</span>
+                </h2>
+
+                <p>
+                    Contact the clinic to enquire about services,
+                    directions and appointment availability.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">⌖</div>
+
+                    <h3>Our Location</h3>
+
+                    <p>
+                        Jaipur, Rajasthan, India
+                    </p>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Garg+Physiotherapy+Clinic+Jaipur"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Get Directions ↗
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">☏</div>
+
+                    <h3>Call the Clinic</h3>
+
+                    <p>
+                        Contact us for enquiries and appointments.
+                    </p>
+
+                    <a href="#appointment">
+                        Request a Callback ↗
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">◷</div>
+
+                    <h3>Clinic Timings</h3>
+
+                    <p>
+                        Please contact the clinic to confirm
+                        opening hours and availability.
+                    </p>
+
+                    <a href="#appointment">
+                        Enquire About Timings ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- GOOGLE MAP -->
+            <div class="map-wrapper">
+
+                <div class="map-heading">
+                    <div>
+                        <span class="eyebrow-dot"></span>
+                        <span>FIND US IN JAIPUR</span>
+                    </div>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Garg+Physiotherapy+Clinic+Jaipur"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Open Google Maps ↗
+                    </a>
+                </div>
+
+                <iframe
+                    title="Find Garg Physiotherapy Clinic in Jaipur"
+                    src="https://maps.google.com/maps?q=Garg%20Physiotherapy%20Clinic%20Jaipur&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="350"
+                    style="border:0;"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL CTA -->
+        <section class="final-cta">
+
+            <div class="final-cta-content">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    YOUR NEXT STEP STARTS HERE
+                </div>
+
+                <h2>
+                    Let's work towards<br>
+                    <span>moving better.</span>
+                </h2>
+
+                <p>
+                    Get in touch with Garg Physiotherapy Clinic
+                    to discuss your needs.
+                </p>
+
+                <a href="#appointment" class="btn btn-primary">
+                    Book an Appointment <span>↗</span>
+                </a>
+
+            </div>
+
+            <div class="cta-decoration">G</div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <div class="logo-icon">G</div>
+
+                    <div class="logo-text">
+                        <h2>GARG <span>PHYSIO</span></h2>
+                        <p>CARE • MOVEMENT • RECOVERY</p>
+                    </div>
+                </a>
+
+                <p class="footer-description">
+                    Supporting your journey towards better movement
+                    through thoughtful physiotherapy care.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Our Services</a>
+                <a href="#doctor">Meet the Doctor</a>
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Get in Touch</h3>
+                <a href="#contact">Contact</a>
+                <a href="#appointment">Appointments</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Garg+Physiotherapy+Clinic+Jaipur"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Google Maps ↗
+                </a>
+            </div>
+
         </div>
 
-        <div class="footer-box">
 
-            <h3>Contact</h3>
+        <div class="footer-bottom">
 
-           <p>📞
-<a href="tel:+919876543210" class="contact-link">
-+91 9876543210
-</a>
-</p>
-            <p>📧 gargphysio@gmail.com</p>
-            <p>📍 Jaipur, Rajasthan</p>
-            <h3 style="margin-top:25px;">Follow Us</h3>
-    <div class="social-icons">
+            <p>
+                © <span id="currentYear"></span>
+                Garg Physiotherapy Clinic. All rights reserved.
+            </p>
 
-        <a href="#" target="_blank">📘</a>
-        <a href="#" target="_blank">📷</a>
-        <a href="#" target="_blank">▶️</a>
-        <a href="#" target="_blank">💼</a>
-
-    </div>
+            <a href="#home">
+                Back to Top ↑
+            </a>
 
         </div>
 
-    </div>
+    </footer>
 
-    <hr>
 
-    <p class="copyright">
-        © 2026 Garg Physiotherapy Clinic | Designed by Dr. Bhumija Garg
-    </p>
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a
+        href="https://wa.me/?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Garg%20Physiotherapy%20Clinic."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact via WhatsApp"
+        title="Contact via WhatsApp">
 
-</footer>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <svg
+            viewBox="0 0 32 32"
+            width="27"
+            height="27"
+            fill="currentColor"
+            aria-hidden="true">
 
-<script>
-AOS.init({
-    duration: 1000,
-    once: true
-});
-</script>
-<a href="#home" class="back-top">
-    ⬆
-</a>
-<script src="script.js"></script>
+            <path d="M16.02 3C8.85 3 3.02 8.79 3.02 15.93c0 2.28.6 4.51 1.75 6.47L3 29l6.82-1.78a13.1 13.1 0 0 0 6.2 1.57h.01c7.16 0 12.99-5.8 12.99-12.94C29.02 8.71 23.18 3 16.02 3zm0 23.57c-1.94 0-3.85-.52-5.53-1.5l-.4-.24-4.05 1.06 1.08-3.94-.26-.41a10.65 10.65 0 0 1-1.63-5.61c0-5.87 4.81-10.65 10.79-10.65 2.9 0 5.6 1.13 7.64 3.17a10.57 10.57 0 0 1 3.16 7.53c0 5.87-4.82 10.59-10.8 10.59zm5.92-7.95c-.32-.16-1.9-.93-2.2-1.03-.3-.11-.51-.16-.73.16-.22.32-.84 1.03-1.03 1.25-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.57-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.49.14-.65.15-.15.32-.38.49-.57.16-.19.21-.32.32-.54.11-.21.06-.4-.03-.57-.08-.16-.73-1.74-1-2.39-.26-.62-.53-.54-.73-.55h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.1-1.14 2.68 0 1.58 1.17 3.1 1.33 3.31.16.22 2.3 3.5 5.58 4.9.78.33 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.1 1.9-.77 2.17-1.52.27-.76.27-1.41.19-1.55-.08-.14-.3-.22-.62-.38z"/>
+        </svg>
+
+    </a>
+
+
+    <!-- PAGE SCRIPT -->
+    <script src="script.js"></script>
+
+    <script>
+        // Fallback loader
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+
+            if (loader) {
+                loader.classList.add("loader-hidden");
+            }
+        });
+
+        // Footer year
+        const yearElement = document.getElementById("currentYear");
+
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+
+        // Appointment enquiry through WhatsApp.
+        // Replace the empty phone number with the clinic's
+        // WhatsApp number including country code, digits only.
+        const CLINIC_WHATSAPP_NUMBER = "";
+
+        const appointmentForm =
+            document.getElementById("appointmentForm");
+
+        if (appointmentForm) {
+            appointmentForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("patientName").value.trim();
+
+                const phone =
+                    document.getElementById("patientPhone").value.trim();
+
+                const service =
+                    document.getElementById("serviceSelect").value;
+
+                const date =
+                    document.getElementById("appointmentDate").value || "Not specified";
+
+                const time =
+                    document.getElementById("appointmentTime").value || "Not specified";
+
+                const message =
+                    document.getElementById("patientMessage").value.trim() || "No additional message";
+
+                const text =
+                    "Hello, I would like to enquire about an appointment at Garg Physiotherapy Clinic.%0A%0A" +
+                    "Name: " + encodeURIComponent(name) + "%0A" +
+                    "Phone: " + encodeURIComponent(phone) + "%0A" +
+                    "Service: " + encodeURIComponent(service) + "%0A" +
+                    "Preferred Date: " + encodeURIComponent(date) + "%0A" +
+                    "Preferred Time: " + encodeURIComponent(time) + "%0A" +
+                    "Message: " + encodeURIComponent(message);
+
+                const number = CLINIC_WHATSAPP_NUMBER.replace(/\D/g, "");
+
+                const url = number
+                    ? "https://wa.me/" + number + "?text=" + text
+                    : "https://wa.me/?text=" + text;
+
+                window.open(url, "_blank", "noopener,noreferrer");
+            });
+        }
+    </script>
 
 </body>
 </html>
